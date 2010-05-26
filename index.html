@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/xhtml1-strict.dtd">
+<html lang="pt-BR">
+<head>
+	<title>Teste - Pegando os videos do youtube</title>
+	<link rel="stylesheet" href="css/macYouTube.css" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.macYouTube.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function() {
+				$("#youtube").macYouTube({
+					pUsuario: "mundoclickweb", 
+					titulo: true, 
+					texto: "Meus Videos",
+					loaderText: "<div class='loading'><img src='images/ajax-loader.gif'>carregando videos...</div>",
+					slideIn: true,
+					itens: true,
+					numItens: 2		
+				});
+			});
+	</script>
+</head>
+<body>
+	<div id="youtube"></div>
+</body>
+</html>
+
+
