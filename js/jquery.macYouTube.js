@@ -65,7 +65,7 @@
 						//Monta a div onde ficara todos os videos
 						montaLinha = montaLinha + "<div class='youtube-videos'>";
 						montaLinha = montaLinha + "<span class='titulo'>" + item.title.$t + "</span><br/>";
-						montaLinha = montaLinha + "<span class='imagem'><a href='" + item.link[0].href + "'><img src='http://i.ytimg.com/vi/" + pIdYoutube + "/default.jpg' /></a></span><br/>";
+						montaLinha = montaLinha + "<span class='imagem'><a href='" + item.link[0].href + "' target='_blank'><img src='http://i.ytimg.com/vi/" + pIdYoutube + "/default.jpg' /></a></span><br/>";
 						montaLinha = montaLinha + "<span class='idyoutube'>ID do video: " + pIdYoutube + "</span><br/>";
 						montaLinha = montaLinha + "<span class='link'>Url: " + item.link[0].href + "</span><br/>";
 						montaLinha = montaLinha + "<span class='datapuclicacao'>" + montaData + "</span> - ";
