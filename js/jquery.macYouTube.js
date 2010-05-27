@@ -27,7 +27,7 @@
 			$(this).show();			
 
 			//Adiciona o footer(rodape) com a assinatura do video
-			$(this).append('<div id="footer">Meu Youtube: <a href="http://www.youtube.com/' + vOptions.pUsuario + '">http://www.youtube.com.br/' + vOptions.pUsuario + '</a></div>');
+			$(this).append('<div id="footer">Meu Youtube: <a href="http://www.youtube.com/' + vOptions.pUsuario + '" target="_blank">http://www.youtube.com.br/' + vOptions.pUsuario + '</a></div>');
 
 			var montaLinha = '';
 			$.getJSON("http://gdata.youtube.com/feeds/base/users/" + vOptions.pUsuario + "/uploads?alt=json-in-script&callback=?", function(data) {
@@ -48,13 +48,17 @@
 						vViews = $(vProcuraContent).find("div:eq(1)").text();
 
 						//Estrelas
-						//vEstrelas = $(vProcuraContent).find("div:eq(3)").text();
+						vEstrelas = $(vProcuraContent).find("div:eq(3)").text();
+						
+						//Recuperando o tempo do video
+						var vProcuraTime = jQuery(item.content.$t).find("table > tbody > tr:last > td:first");	
+						vTime = $(vProcuraTime).find("span:eq(1)").text();
 
 						//Inicializando a data para colocar no formato brasileiro(dd/mm/yyyy)
 						var vData = new Date(item.published.$t);
 
 						//Coloca no formato brasileiro
-						montaData = vData.getDate() + "/" + (vData.getMonth()+1) + "/" + (vData.getYear()+1900)
+						montaData = vData.getDate() + "/" + (vData.getMonth()+1) + "/" + (vData.getYear()+1900);
 						
 						//Monta a div onde ficara todos os videos
 						montaLinha = montaLinha + "<div class='youtube-videos'>";
@@ -63,7 +67,9 @@
 						montaLinha = montaLinha + "<span class='idyoutube'>" + pIdYoutube + "</span><br/>"
 						montaLinha = montaLinha + "<span class='link'>" + item.link[0].href + "</span><br/>"
 						montaLinha = montaLinha + "<span class='datapuclicacao'>" + montaData + "</span> - "
-						montaLinha = montaLinha + "<span class='views'>" + vViews.replace('Views','Exibi&ccedil;&otilde;es') + "</span><br/><br/><hr/>"
+						montaLinha = montaLinha + "<span class='views'>" + vViews.replace('Views','Exibi&ccedil;&otilde;es') + "</span><br/>"
+						montaLinha = montaLinha + "<span class='tempo'>" + vEstrelas.replace('ratings','Avalia&ccedil;&otilde;es') + "</span><br/>"
+						montaLinha = montaLinha + "<span class='tempo'>Tempo: " + vTime + "</span><br/><br/><hr/>"
 						montaLinha = montaLinha + "</div>";	
 
 						//Aplica a div montada na ID dos videos.
