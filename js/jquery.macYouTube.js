@@ -92,13 +92,23 @@
 							if ( i == vOptions.numItens -1 ) return false;
 						}
 					  });
+					
+					//Quando passar o mouse em cima da DIV ele muda de cor.
+					$("div#youtube-videos div").hover(function () {
+						  $(this).addClass("hoverYoutube");
+						},
+						function () {
+						  $(this).removeClass("hoverYoutube");
+						}
+					  );	
 				}
 			});
 
-			// Mostrar os repositorios
+			// Mostrar os videos
 			if (vOptions.slideIn) {
 				$("div#youtube-videos").slideDown(1000);
-			}
+			}		
+
 			 // plugin defaults
 			$.fn.macYouTube.defaults = {
 				pUsuario: null,

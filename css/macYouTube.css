@@ -3,11 +3,12 @@ img {border:none;}
 
 /* IDs */
 #youtube h2{font-size:14px;}
-#youtube-videos{font-family: verdana; font-size: 12px; width: 500px;}		
-#footer{font-size: 14px;}
-#footer a{text-decoration:none; color: #000;}
-#footer a:hover{text-decoration:underline;}
+#youtube #youtube-videos{font-family: verdana; font-size: 12px; width: 500px;}		
+#youtube #footer{font-size: 14px;}
+#youtube #footer a{text-decoration:none; color: #000;}
+#youtube #footer a:hover{text-decoration:underline;}
 
 /* Classes */
-.loading{width:300px;margin:20px 10px;}
-.loading img{vertical-align:middle;margin-right:6px;}
+#youtube .loading{width:300px;margin:20px 10px;}
+#youtube .loading img{vertical-align:middle;margin-right:6px;}
+#youtube .hoverYoutube {background-color: #F7F7F7;}
