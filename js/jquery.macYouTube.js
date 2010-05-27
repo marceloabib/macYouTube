@@ -27,7 +27,7 @@
 			$(this).show();			
 
 			//Adiciona o footer(rodape) com a assinatura do video
-			$(this).append('<div id="footer">Meu Youtube: <a href="http://www.youtube.com/' + vOptions.pUsuario + '" target="_blank">http://www.youtube.com.br/' + vOptions.pUsuario + '</a></div>');
+			$(this).append('<div id="footer">Veja nosso canal: <a href="http://www.youtube.com/' + vOptions.pUsuario + '" target="_blank">http://www.youtube.com.br/' + vOptions.pUsuario + '</a></div>');
 
 			var montaLinha = '';
 			var montaEstrela = '';

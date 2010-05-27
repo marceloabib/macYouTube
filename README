@@ -1,0 +1,40 @@
+jQuery macYouTube plugin 1.0
+
+Copyright (c) 2010-2012 Marcelo Abib - marcelinho.ruliz@gmail.com
+
+Licencidado sob MIT licence
+  http://www.opensource.org/licenses/mit-license.php
+
+jquery.macYouTube.js 2010-05-26 22:34GMT-3 marceloabib
+
+
+Como utilizar
+
+1. Faça download dos arquivos js/jquery.macYouTube.js, css/macYouTube.css, images/ajax-loader.gif;
+2. Coloque-os nas pastas do seu projeto;
+3. Faça a chamada ao plugin como abaixo:
+				$(document).ready(function() {
+				$("#youtube").macYouTube({
+					pUsuario: "mundoclickweb", 
+					titulo: true, 
+					texto: "Meus Videos",
+					loaderText: "<div class='loading'><img src='images/ajax-loader.gif'>carregando videos...</div>",
+					slideIn: true,
+					itens: true,
+					numItens: 2		
+				});
+			});
+4. Adicione o elemento youtube ao seu HTML como abaixo:
+				<div id="youtube"></div>
+
+Sugestões, dúvidas, críticas e melhorias podem ser enviadas para marcelinho.ruliz at gmail.com
+
+Demo:
+http://marcelo.todoinfo.com.br/YouTube/
+
+h2. Informações
+
+XHTML 1.1 Strict W3C Válido.
+Hospedado gratuitamente no GitHub.
+Copyright © 2010-2012 Marcelo Abib para MundoClick Produtora de Internet, lançado sob MIT license.
+
